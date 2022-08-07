@@ -26,7 +26,7 @@ let pessoa = {
         '.',
     );
   },
-  saudacao: function () {
+  saudacao() {
     alert('Oi! Eu sou ' + this.nome[0] + '.');
   }, //as funções podem ter argumentos que deverão ser passados ao serem chamados fora do objeto
 };

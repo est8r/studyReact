@@ -16,13 +16,13 @@ const Compras = ()=>{
 
   function comprar(){
     setContador(contador + 1);
-  } // isto é a mesma coisa que esta sendo passada no onclick do button, mas ao inves de chamarmos o nome comprar dentro das chaves, construimos a função la dentro (pode ser apagado se fizer direto no evento)
+  } // isto é a mesma coisa que esta sendo passada no onclick do button, mas ao inves de chamarmos o nome 'comprar' dentro das chaves, construimos a função la dentro (pode ser apagado se fizer direto no evento)
   
   return (
     <div>
       <button onClick={ () => setContador(contador + 1) }> Comprar: {contador}</button> //função comprar dentro das chaves, se fizer a função por fora, apagar aqui
       <p>Total: {contador}</p>
-      <p>Preço: R$ {contador * 250}</p> //inicialmente count é zero pois não foi setadoum valor
+      <p>Preço: R$ {contador * 250}</p> //inicialmente count é zero pois não foi setado um valor
     </div>
   );
 };

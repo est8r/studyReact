@@ -1,8 +1,6 @@
 //funções
 
-//objetos
-
-//expressões
+//objetos - explicação na pasta objects
 
 //DESESTRUTURAÇÃO { }-------------------------------------
 //utiliza os {}

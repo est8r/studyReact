@@ -119,3 +119,10 @@ do this para chamar seus atos.
 assegurará que os valores corretos estão sendo usados quando o contexto de um membro 
 muda (exemplo: duas instâncias diferentes do objeto pessoa podem ter diferentes nomes, 
 mas vão querer usar seu próprio nome ao usar a saudação)." - mdn web docs*/
+
+/*Math é um objeto nativo e possui propriedades e métodos assim como
+console que possui log() como método */
+
+Math.PI; //propriedade que retorna o numero de pi 3.14
+Math.random(); //metodo que retorna um numero aleatorio
+//quadrado roxo = metodo, retangulo azul = propriedade

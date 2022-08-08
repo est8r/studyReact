@@ -3,7 +3,7 @@
 Usado para facilitar a sincronização do estado entre elementos, ou seja, atualiza uma informação 
 de forma mais precisa entre diversos componentes mesmo que sejam de diferentes composições.
 
-| useState é um método do objeto React que é usado para mostrar o estado daquele elento.
+| useState é um método do objeto React que é usado para mostrar o estado daquele elemento.
   Em sua forma pura no console, é retornado um array [x, f], x é o valor setado ao ser usado
   este método e f é a função que irá modificar este valor.
   ex:

@@ -1,0 +1,23 @@
+//BABEL
+transforma o JSX que nos vamos escrever em funções react
+
+//JSX
+
+- linkamos o react e o babel no head
+- no body, adicionamos uma div com id 'app' para criar o react dentro
+- em baixo, criamos a tag script e ao criamos a tag, vamos
+definir o tipo como 'text/babel'
+- dentro do script (que esta dentro do body) vamos indicar ao
+react o local onde ele irá montar o codigo (na div app) por
+isso escrevemos o objeto ReactDOM.render(<App/>, document.getElementById('app')) 
+
+| render é uma função/metodo que irá renderizar o local onde
+vamos indicar ao react
+| como parametro dela, nós passamos o nome da função que
+criamos no proprio script como uma tag html e a seleção que
+fazemos da div app atraves do DOM
+| todo nome de função que criamos em react começa com letra maiuscula
+| <App/> é uma tag/função de react em JSX
+
+- dentro da função App criada no script, vamos definir o 
+return criando uma div comum de html e um texto dentro

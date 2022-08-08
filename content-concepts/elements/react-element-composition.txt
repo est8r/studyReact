@@ -1,0 +1,44 @@
+//COMPOSIÇÃO / REUTILIZAÇÃO -----------------------------------------------------------
+
+Criamos componentes para serem reutilizados diversas vezes
+no código
+ex:
+
+  | se temos um botão principal criado como componente que realiza uma função especifica e/ou 
+  tem uma estilização especifica, podemos reutiliza-lo no site inteiro
+
+  <script>
+
+    const Button = () =>{
+      return <button>ver mais</button>
+    }
+
+    const App = () =>{
+      return <div>Meu app React
+      <Button />                    //REUTILIZANDO O COMPONENTE AQUI
+      </div>
+    }
+    ReactDOM.render(<App />, document.getElementById('app'))
+
+  </script>
+
+- chamamos o <App /> na função render para ser rodado na pagina
+- este codigo vai retornar tanto o texto "Meu app React", quanto o botão criado no componente
+  button, pois o reutiliza-mos dentro de App (que esta sendo renderizada)
+- podemos reutilizar quantas vezes quisermos dentro dum mesmo componente e em mais de um; 
+  podemos usar mais de um componente num mesmo componente.
+- mesmo criando Button e o chamando dentro de App, ele só irá aparecer uma vez (que é dentro da
+  composição App) pois só estamos renderizando App e só o que está dentro dele irá ser mostrado.
+
+  | também podemos criar outras funções e calculos de JS dentro de um componente (antes do return),
+  ex:
+
+  const titulo = () =>{
+    const numero = Math.random() * 1000
+    return <h1>Um Titulo {numero}</h1>
+  }
+
+- aqui criamos uma const que contém o cálculo de um número aleatorio vezes 1000
+- para que ele apareça na tela ao lado do titulo, utilizamos as chaves {} e o nome da const 
+  dentro da tag
+- o resultado sera um numero aleatorio diferente todas as vezes que recarregarmos a pagina

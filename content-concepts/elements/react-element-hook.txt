@@ -1,0 +1,38 @@
+//HOOK ----------------------------------
+
+Usado para facilitar a sincronização do estado entre elementos, ou seja, atualiza uma informação 
+de forma mais precisa entre diversos componentes mesmo que sejam de diferentes composições.
+
+| useState é um método do objeto React que é usado para mostrar o estado daquele elento.
+  Em sua forma pura no console, é retornado um array [x, f], x é o valor setado ao ser usado
+  este método e f é a função que irá modificar este valor.
+  ex:
+
+- queremos saber quantos itens temos no carrinho de compras de um cliente atualmente e se 
+  esta quantidade se encaixa em uma promoção
+
+const Compras = ()=>{
+  const [contador, setContador] = React.useState(0); //desestruturamos os dois argumentos em um array
+
+  function comprar(){
+    setContador(contador + 1);
+  } // isto é a mesma coisa que esta sendo passada no onclick do button, mas ao inves de chamarmos o nome comprar dentro das chaves, construimos a função la dentro (pode ser apagado se fizer direto no evento)
+  
+  return (
+    <div>
+      <button onClick={ () => setContador(contador + 1) }> Comprar: {contador}</button> //função comprar dentro das chaves, se fizer a função por fora, apagar aqui
+      <p>Total: {contador}</p>
+      <p>Preço: R$ {contador * 250}</p> //inicialmente count é zero pois não foi setadoum valor
+    </div>
+  );
+};
+
+- count representa a quantidade de itens e o 250 o valor dele. setContador irá fazer a conta
+  de multiplicação com o numero de itens vezes o valor toda vez que clicarmos no botão (toda
+  vez que clicarmos a quantidade aumenta por causa do contador + 1)
+- useState é um Hook que define este número de itens por meio do primeiro atributo(count) e
+  seta/atualiza este numero para um novo por meio da função(setCount). Isso vai fazer com
+  que o count seja atualizado em toda a aplicação
+- useState é usado dentro dos componentes
+- não usar o nome da função (nesse caso setContador) passando o valor direto pois pode danificar
+  o site, antes devemos usar o evento e a função sendo chamada la dentro

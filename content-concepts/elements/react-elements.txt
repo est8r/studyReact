@@ -1,0 +1,63 @@
+*ver arquivos index e explicando-index para complemento*
+
+//Todo elemento React é criado com a função createElement.
+//O Babel é o responsável por transformar o elemento criado com JSX (que parece com HTML) em funções de React
+
+//então, esta função:
+  const App = ()=> {
+  return <div id='container'>Meu App React</div>;
+  }
+
+//vai se tranformar nisto:
+  function App(){
+  return React.createElement('div', {id: 'container'}, 'Meu App React');
+  }
+
+//essa função vai criar um elemento react que contém como argumentos (em ordem):
+- o nome do elemento/tag que voce quer criar (div)
+- objeto que recebe propriedades e metodos
+- as propriedades desse objeto são os atributos usados ao indicar a tag html dentro da função,
+  por exemplo, id (que seria a key) recebe como conteudo 'container', então ficariam em formato
+  de objeto: id: 'container'
+- 'Meu App React' (conteudo da div) também é um argumento.
+    |obs: no lugar de 'Meu App React', que é um texto, podia ser qualquer outro argumento ou até
+      mesmo outros elementos (React createElement etc..)
+
+  *ver foto react-element-example para complemento*
+
+//o babel já transforma nossa div em react.createElement, por isso não precisamos escrever desta forma
+  |para ver o código em tempo real sendo transformado em elemento de React: https://babeljs.io/repl
+
+
+//EXEMPLO de createElement tendo outro createElement como argumento--------------------------------------------------
+
+codigo escrita comum:
+
+  function cachorro(){
+    return <div id = 'corpo' class = 'body'>
+      <h1 id = 'cor'>Caramelo</h1>
+    </div>
+  }
+
+codigo transformado pelo Babel:
+
+  function cachorro() {
+    return /*#__PURE__*/React.createElement("div", {
+      id: "corpo",
+      class: "body"
+    }, /*#__PURE__*/React.createElement("h1", {
+      id: "cor"
+    }, "Caramelo"));
+  }
+
+- retorna pra nós a tag 'div' como primeiro argumento de texto
+- o objeto contendo id: 'corpo' e class: 'body' como segundo argumento
+- como terceiro argumento, temos um novo React.createElement que esta criando um novo elemento 
+  que possui como argumento a tag h1, um objeto contendo id: 'cor' e o conteudo da tag "caramelo".
+    |este ultimo argumento mesmo sendo outro elemento sendo criado, poderia criar mais um elemento
+    e assim por diante dependendo de quantas tags colocarmos.
+
+//ALGUNS PONTOS
+  - não podemos ter mais de uma tag principal na raiz de um elemento, apenas dentro
+  - caso queira dar enter após o return para que fique mais organizado, tem que colocar entre parenteses ()
+  - render quer dizer rendereizar, ou seja, mostrar na tela

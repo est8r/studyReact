@@ -1,0 +1,20 @@
+//COMPONENTES --------------------------------------------------------------------------------
+
+Permitem a voce dividir a sua interface em pequenos elementos.
+São criados através de funções que retonam elementos React e criado por classes que estendem
+React.Component e possuem o método render(), retornando um elemento React 
+ex:
+
+  //function Component
+  const Button = () => {
+    return <button>Ver Mais</button>;
+  };
+
+  //Class Component
+  class Button extends React.Component{
+    render() {
+      return <button>Ver Mais</button>;
+    }
+  }
+
+  | hoje em dia não se utiliza com tanta frequencia as class pois foi criado o react hooks

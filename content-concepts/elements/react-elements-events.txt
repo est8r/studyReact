@@ -1,0 +1,22 @@
+// EVENTOS NO REACT
+
+| no React em alternativa ao dom, colocamos o evento na mesma linha de código do elemento,
+  pois facilita o entendimento da função de cada um deles
+
+const Produtos = () => {
+  function handleClick(event){
+    alert('Bem Vindo ' + event.target.innerText)
+  }
+  return {
+    <div>
+      <button onClick={handleClick}>Gustavo</button>
+      <button onClick={handleClick}>Marcelo</button>
+    </div>
+  };
+}
+
+- aqui nos ativamos o evento de click com o handleClick
+- abrimos chaves {} pois estamos passando um codigo js direto no html
+- o event.target.innerText mostra o texto dentro dos buttons ao clicarmos,
+  no caso gustavo e marcelo
+- o resultado final são alerts com 'bem vindo gustavo' ou 'bem vindo marcelo'

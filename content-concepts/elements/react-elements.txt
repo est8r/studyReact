@@ -60,4 +60,4 @@ codigo transformado pelo Babel:
 //ALGUNS PONTOS
   - não podemos ter mais de uma tag principal na raiz de um elemento, apenas dentro
   - caso queira dar enter após o return para que fique mais organizado, tem que colocar entre parenteses ()
-  - render quer dizer rendereizar, ou seja, mostrar na tela
+  - render quer dizer renderizar, ou seja, mostrar na tela
